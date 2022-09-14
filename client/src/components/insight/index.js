@@ -135,7 +135,7 @@ function Index() {
             </span>
             <p>Gallery</p>
           </div>
-          <p className="section_title mediumFont">Gallary</p>
+          <p className="section_title mediumFont">Gallery</p>
           <div className="white_space"></div>
 
           <Row className="px-0 px-md-4">
