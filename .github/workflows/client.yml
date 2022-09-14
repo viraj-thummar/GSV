@@ -1,0 +1,42 @@
+name: Deploy to Amazon S3
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  AWS_REGION: us-east-1
+  BUCKET_NAME: gauravsinghviventures.com
+  CI: false
+  
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./client
+    environment: production
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
+    
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14.17.3'
+
+    - name: Build React App
+      run: node -v && npm -v && npm install && npm run build
+      
+    - name: Deploy app build to S3 bucket
+      run: aws s3 cp --recursive ./build/ s3://${{ env.BUCKET_NAME }}/
