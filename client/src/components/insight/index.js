@@ -109,13 +109,13 @@ function Index() {
         </Container>
         <div className="white_space"></div>
       </div>
-      {/* <div className="white_space"></div>
+      <div className="white_space"></div>
       <Container>
         <BlogArticle />
-      </Container> */}
-      {/* <div className="white_space"></div> */}
+      </Container>
+      <div className="white_space"></div>
       <div className="sectionWithBG">
-        {/* <div className="white_space"></div>
+        <div className="white_space"></div>
         <Container>
           <div className="section_heading">
             <span>
@@ -125,7 +125,7 @@ function Index() {
           </div>
           <p className="section_title mediumFont">Videos </p>
           <YouTubeVideos />
-        </Container> */}
+        </Container>
         <div className="white_space"></div>
         <div className="white_space"></div>
         <Container>

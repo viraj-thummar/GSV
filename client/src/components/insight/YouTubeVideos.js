@@ -32,8 +32,10 @@ function YouTubeVideos() {
   };
 
   const videoList = [
-    "https://www.youtube.com/watch?v=ngc9gnGgUdA&t=1908s",
-    "https://www.youtube.com/watch?v=HpVOs5imUN0",
+    "https://www.youtube.com/watch?v=hcn15CWrutM",
+    "https://www.youtube.com/watch?v=M9Kr4xo0Gf4",
+    "https://www.youtube.com/watch?v=rA81vjAWdio",
+    "https://www.youtube.com/watch?v=qWBiDTRklUk",
   ];
 
   return (
